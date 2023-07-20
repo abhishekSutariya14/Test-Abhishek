@@ -35,3 +35,22 @@ export const listData = [
     description: 'Top 10% of highest spending players in a month',
   },
 ];
+
+export const prizeData = [
+  {
+    title: 'Prize Pool',
+    value: '$12,000',
+  },
+  {
+    title: 'UNDER',
+    value: '3.25x',
+  },
+  {
+    title: 'OVER',
+    value: '1.25x',
+  },
+  {
+    title: 'Entry FEES',
+    value: '5',
+  },
+];

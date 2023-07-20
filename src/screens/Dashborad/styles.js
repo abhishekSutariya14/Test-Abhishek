@@ -1,0 +1,208 @@
+import {StyleSheet} from 'react-native';
+import {FONT_FAMILY, FONT_SIZE} from '../../utils/Fonts';
+import {UTIL_COLORS} from '../../utils/Colors';
+
+export const styles = StyleSheet.create({
+  mainContainer: {
+    justifyContent: 'center',
+    marginTop: 15,
+    marginHorizontal: 15,
+  },
+  centerAlign: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+  },
+  upperView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  regularText: {
+    fontFamily: FONT_FAMILY.REGULAR,
+
+    fontSize: FONT_SIZE.FONT13,
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+  },
+  violateText: {
+    fontFamily: FONT_FAMILY.MEDIUM,
+    fontSize: FONT_SIZE.FONT12,
+    color: UTIL_COLORS.VIOLATE_TEXT_COLOR,
+  },
+  regularTextCenter: {
+    fontFamily: FONT_FAMILY.REGULAR,
+    textAlign: 'center',
+    marginLeft: 10,
+    fontSize: FONT_SIZE.FONT13,
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+  },
+  rowContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignContent: 'center',
+  },
+  borderView: {
+    borderWidth: 2,
+    borderColor: UTIL_COLORS.BORDER_COLOR,
+    borderRadius: 5,
+    height: 120,
+    marginTop: 30,
+  },
+  centerIconStyle: {marginTop: 20, paddingBottom: 20},
+  centerContainerStyle: {
+    justifyContent: 'center',
+    marginHorizontal: 15,
+    borderWidth: 1,
+    borderColor: UTIL_COLORS.BORDER_COLOR,
+  },
+  rowStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+  },
+  flexHalf: {flex: 0.5, marginTop: 10},
+  rowStylePadding: {justifyContent: 'center', alignItems: 'center'},
+  boldTextStyle: {
+    fontFamily: FONT_FAMILY.BOLD,
+    paddingLeft: 10,
+    fontSize: FONT_SIZE.FONT18,
+  },
+  mediumTextStyle: {
+    fontFamily: FONT_FAMILY.MEDIUM,
+    marginTop: 10,
+    fontSize: FONT_SIZE.FONT13,
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+  },
+  separator: {
+    height: 4,
+    backgroundColor: UTIL_COLORS.SECONDARY_BG,
+    marginTop: 10,
+  },
+  tabContainer: {
+    color: UTIL_COLORS.TERTIARY_TEXT_COLOR,
+    fontFamily: FONT_FAMILY.REGULAR,
+    fontSize: 12,
+  },
+  tabContainerStyle: {
+    fontFamily: FONT_FAMILY.SEMI_BOLD,
+    textAlign: 'center',
+  },
+  selectedBorder: {
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+    fontFamily: FONT_FAMILY.MEDIUM,
+    fontSize: 16,
+    marginTop: 20,
+  },
+  fontMedium: {
+    fontFamily: FONT_FAMILY.MEDIUM,
+    fontSize: FONT_SIZE.FONT13,
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+  },
+  height20: {height: 20},
+  colorPrimary: {color: UTIL_COLORS.PRIMARY},
+  bgColor: {backgroundColor: UTIL_COLORS.SECONDARY_BG},
+  listContainerStyle: {flexGrow: 1, paddingBottom: 10},
+  containerItem: {color: UTIL_COLORS.BG_COLOR, paddingLeft: 5},
+  containerItemStyle: {
+    backgroundColor: UTIL_COLORS.PRIMARY_BUTTON_COLOR,
+    height: 50,
+    width: 160,
+    borderRadius: 45,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  topSpace: {marginTop: 2},
+  textBoldStyle: {fontFamily: FONT_FAMILY.MEDIUM, fontWeight: '600'},
+  textMediumStyle: {
+    fontFamily: FONT_FAMILY.MEDIUM,
+    fontWeight: '600',
+    color: UTIL_COLORS.GOLD,
+    fontSize: FONT_SIZE.FONT13,
+  },
+  mediumFont: {
+    fontFamily: FONT_FAMILY.MEDIUM,
+    marginTop: 10,
+    fontSize: FONT_SIZE.FONT13,
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+  },
+  itemRightStyle: {flex: 3, paddingRight: 5},
+  padding15: {padding: 15},
+  fontRegular: {
+    fontFamily: FONT_FAMILY.REGULAR,
+    fontSize: FONT_SIZE.FONT14,
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+  },
+  darkBGColor: {backgroundColor: UTIL_COLORS.BG_COLOR},
+  semiBold: {
+    fontFamily: FONT_FAMILY.SEMI_BOLD,
+    textAlign: 'center',
+  },
+  contStyle: {
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+    fontFamily: FONT_FAMILY.MEDIUM,
+    fontSize: FONT_SIZE.FONT16,
+    marginTop: 20,
+  },
+  rowMainStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 15,
+  },
+  rowStyleContainer: {
+    backgroundColor: UTIL_COLORS.PRIMARY_BUTTON_COLOR,
+    height: 50,
+    width: 160,
+    borderRadius: 45,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  line: {color: UTIL_COLORS.BG_COLOR, paddingLeft: 5},
+  lineHorizontal: {backgroundColor: UTIL_COLORS.GRAY_BG_COLOR, padding: 15},
+  rowSpace: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  centerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  centerStyle: {
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+    fontFamily: FONT_FAMILY.MEDIUM,
+    fontSize: FONT_SIZE.FONT16,
+    marginLeft: 10,
+  },
+  tinyStyle: {
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+    fontFamily: FONT_FAMILY.MEDIUM,
+    fontSize: FONT_SIZE.FONT16,
+    marginLeft: 10,
+  },
+  paddingCenter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 15,
+  },
+  rowSpaceStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingTop: 15,
+  },
+  fontMediumStyle: {
+    color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
+    fontFamily: FONT_FAMILY.MEDIUM,
+    fontSize: FONT_SIZE.FONT16,
+  },
+  circleView: {
+    backgroundColor: UTIL_COLORS.PRIMARY,
+    height: 50,
+    width: '90%',
+    borderRadius: 45,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  lineTiny: {color: UTIL_COLORS.BG_COLOR, paddingLeft: 5},
+  centerAlignStyle: {flex: 1, alignItems: 'center'},
+});
