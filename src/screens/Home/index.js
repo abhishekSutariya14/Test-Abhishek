@@ -11,20 +11,20 @@ import {
   UpArrowIcon,
   UserImage,
 } from '../../assets';
-import {FONT_FAMILY} from '../../utils/Fonts';
+import {FONT_FAMILY, normalize} from '../../utils/Fonts';
 import {UTIL_COLORS} from '../../utils/Colors';
 import {listData} from '../../utils/ConstData';
 import {styles} from './styles';
+import { TopTabBarComponent } from '../../components/TopTabBarComponent';
 
 export const Home = () => {
-  const [tabSelected, setTabSelected] = useState('Game');
 
   const renderList = ({item, index}) => {
     return (
       <View key={index.toString()} style={styles.containerItem}>
         <View style={styles.containerItemStyle}>
           <View style={styles.containerItem}>
-            <LogoIcon height={60} width={60} />
+            <LogoIcon height={normalize(60)} width={normalize(60)} />
           </View>
           <View style={styles.itemRightStyle}>
             <Text style={styles.textBoldStyle}>
@@ -43,16 +43,16 @@ export const Home = () => {
       <View style={styles.darkBGColor}>
         <View style={styles.padding15}>
           <View style={styles.mainContainer}>
-            <PrimaryIcon height={30} width={30} />
+            <PrimaryIcon height={normalize(30)} width={normalize(30)} />
             <Text style={styles.fontRegular}>{'Profile'}</Text>
-            <MessageIcon height={30} width={30} />
+            <MessageIcon height={normalize(30)} width={normalize(30)} />
           </View>
 
           <View style={styles.centerAlign}>
             <View>
-              <UserImage height={75} width={75} />
+              <UserImage height={normalize(75)} width={normalize(75)} />
               <TouchableOpacity style={styles.upperView}>
-                <PickIcon height={24} width={24} />
+                <PickIcon height={normalize(24)} width={normalize(24)} />
               </TouchableOpacity>
             </View>
             <Text style={styles.regularText}>{'Jina Simons'}</Text>
@@ -64,20 +64,20 @@ export const Home = () => {
             </Text>
           </View>
           <View style={styles.rowContainer}>
-            <LogoutIcon height={20} width={20} />
-            <Text style={styles.regularTextCenter}>{'Logout'}</Text>
+            <LogoutIcon height={normalize(20)} width={normalize(20)} />
+            <Text style={[styles.regularTextCenter, styles.topSpace]}>{'Logout'}</Text>
           </View>
 
           <View style={styles.borderView}>
             <View style={styles.centerIconStyle}>
-              <StarIcon height={26} width={30} />
+              <StarIcon height={normalize(26)} width={normalize(30)} />
             </View>
             <View style={styles.centerContainerStyle}>
               <View style={styles.rowStyle}>
                 <View style={styles.flexHalf}>
                   <Text style={styles.mediumTextStyle}>{'Under or Over'}</Text>
                   <View style={styles.rowStylePadding}>
-                    <UpArrowIcon height={32} width={32} />
+                    <UpArrowIcon height={normalize(32)} width={normalize(32)} />
                     <Text style={styles.boldTextStyle}>{'81%'}</Text>
                   </View>
                 </View>
@@ -85,7 +85,7 @@ export const Home = () => {
                 <View style={styles.flexHalf}>
                   <Text style={styles.mediumTextStyle}>{'Top 5'}</Text>
                   <View style={styles.rowStylePadding}>
-                    <DownArrowIcon height={32} width={32} />
+                    <DownArrowIcon height={normalize(32)} width={normalize(32)} />
                     <Text style={styles.boldTextStyle}>{'-51%'}</Text>
                   </View>
                 </View>
@@ -95,37 +95,7 @@ export const Home = () => {
         </View>
         <View style={styles.separator} />
 
-        <View style={styles.tabContainer}>
-          <TouchableOpacity
-            onPress={() => setTabSelected('Game')}
-            style={[
-              styles.tabContainerStyle,
-              tabSelected == 'Game' ? styles.selectedBorder : {},
-            ]}>
-            <Text
-              style={[
-                styles.fontMedium,
-                tabSelected == 'Game' ? styles.colorPrimary : {},
-              ]}>
-              {'Games played'}
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            onPress={() => setTabSelected('Badges')}
-            style={[
-              styles.tabContainerStyle,
-              tabSelected == 'Badges' ? styles.selectedBorder : {},
-            ]}>
-            <Text
-              style={[
-                styles.fontMedium,
-                tabSelected == 'Badges' ? styles.colorPrimary : {},
-              ]}>
-              {'Badges'}
-            </Text>
-          </TouchableOpacity>
-        </View>
+        <TopTabBarComponent />
       </View>
     );
   };
@@ -133,7 +103,7 @@ export const Home = () => {
   return (
     <FlatList
       data={listData}
-      keyExtractor={(item, index) => index.toString()}
+      keyExtractor={(_item, index) => index.toString()}
       renderItem={renderList}
       contentContainerStyle={styles.listContainerStyle}
       style={styles.bgColor}

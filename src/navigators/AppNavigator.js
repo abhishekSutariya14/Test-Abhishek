@@ -16,7 +16,8 @@ import {
   ProfileIcon,
   ResearchIcon,
 } from '../assets';
-import {FONT_FAMILY, FONT_SIZE} from '../utils/Fonts';
+import {FONT_FAMILY, FONT_SIZE, normalize} from '../utils/Fonts';
+import { TAB_NAME } from '../utils/Constants';
 
 const Tab = createBottomTabNavigator();
 export default function AppNavigator() {
@@ -30,22 +31,22 @@ export default function AppNavigator() {
           tabBarIcon: ({focused, color, size}) => {
             const fillColor = focused ? UTIL_COLORS.PRIMARY : UTIL_COLORS.GREY;
             switch (route.name) {
-              case 'Home':
-                return <HomeIcon fill={fillColor} height={25} width={25} />;
+              case TAB_NAME.HOME:
+                return <HomeIcon fill={fillColor} height={normalize(25)} width={normalize(25)} />;
 
-              case 'Leagues':
-                return <LeagueIcon fill={fillColor} height={25} width={25} />;
+              case TAB_NAME.LEAGUES:
+                return <LeagueIcon fill={fillColor} height={normalize(25)} width={normalize(25)} />;
 
-              case 'Research':
-                return <ResearchIcon fill={fillColor} height={25} width={25} />;
+              case TAB_NAME.RESEARCH:
+                return <ResearchIcon fill={fillColor} height={normalize(25)} width={normalize(25)} />;
 
-              case 'Leaderboard':
+              case TAB_NAME.LEADERBOARD:
                 return (
-                  <LeaderboardIcon fill={fillColor} height={25} width={25} />
+                  <LeaderboardIcon fill={fillColor} height={normalize(25)} width={normalize(25)} />
                 );
 
-              case 'Profile':
-                return <ProfileIcon fill={fillColor} height={25} width={25} />;
+              case TAB_NAME.PROFILE:
+                return <ProfileIcon fill={fillColor} height={normalize(25)} width={normalize(25)} />;
             }
           },
           tabBarLabelStyle: {
@@ -54,11 +55,11 @@ export default function AppNavigator() {
             color: UTIL_COLORS.SECONDARY_TEXT_COLOR,
           },
         })}>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Leagues" component={Leagues} />
-        <Tab.Screen name="Research" component={Research} />
-        <Tab.Screen name="Leaderboard" component={Leaderboard} />
-        <Tab.Screen name="Profile" component={Profile} />
+        <Tab.Screen name={TAB_NAME.HOME} component={Home} />
+        <Tab.Screen name={TAB_NAME.LEAGUES} component={Leagues} />
+        <Tab.Screen name={TAB_NAME.RESEARCH} component={Research} />
+        <Tab.Screen name={TAB_NAME.LEADERBOARD} component={Leaderboard} />
+        <Tab.Screen name={TAB_NAME.PROFILE} component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
   );
